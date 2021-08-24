@@ -13,6 +13,7 @@ albedo_color = Color( 0.490196, 0.490196, 0.490196, 1 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -1 )
+friction = 0.301
 
 [node name="Floor" type="StaticBody" parent="."]
 
@@ -22,6 +23,18 @@ mesh = SubResource( 1 )
 material/0 = SubResource( 2 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Floor"]
+transform = Transform( 30, 0, 0, 0, -1.31134e-06, 1, 0, -30, -4.37114e-08, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="Floor2" type="StaticBody" parent="."]
+transform = Transform( 0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 0, 0, 1, 40, 7, 0 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Floor2"]
+transform = Transform( 30, 0, 0, 0, -1.31134e-06, 1, 0, -30, -4.37114e-08, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Floor2"]
 transform = Transform( 30, 0, 0, 0, -1.31134e-06, 1, 0, -30, -4.37114e-08, 0, 0, 0 )
 shape = SubResource( 3 )
 
