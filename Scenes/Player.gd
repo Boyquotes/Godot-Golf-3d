@@ -77,5 +77,5 @@ func _input(event):
 	if !paused:
 		# If the player moves the mouse
 		if event is InputEventMouseMotion:
-			fire_vector = fire_vector.rotated(Vector3.UP, event.relative.x * turn_speed)
+			fire_vector = fire_vector.rotated(Vector3.UP, event.relative.x * -turn_speed)
 			#fire_vector = fire_vector.rotated(calculate_perpendicular_vector(fire_vector), event.relative.y * turn_speed)
